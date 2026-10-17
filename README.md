@@ -4,6 +4,10 @@
 
 ## Tiếng Việt
 
+> **Tải ứng dụng / Download APK:** [Tất cả phiên bản (GitHub Releases)](https://github.com/hoanghanhdevvn/GMS-Protect/releases) · [GMS Protect Full v1.0.4](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.4)
+>
+> **Lưu ý:** Link v1.0.4 chỉ khả dụng sau khi bản phát hành `v1.0.4` được đăng trên GitHub. APK nằm trong mục **Assets** của Release, không nằm trong thư mục source.
+
 **GMS Protect** hỗ trợ duy trì Google Play Services (GMS) và khả năng nhận thông báo FCM trên một số bản Xiaomi HyperOS / MIUI, đặc biệt ROM China. Ứng dụng khai thác các cơ chế bảo vệ sẵn có của hệ thống, không đòi hỏi root hay chạy dịch vụ GAME_WATCH liên tục.
 
 ### Điểm mới trong v1.0.4
@@ -36,6 +40,10 @@ Kho mã nguồn công khai giữ cấu trúc như bản Lite: `README.md` và `s
 ---
 
 ## English
+
+> **Download / Releases:** [All releases](https://github.com/hoanghanhdevvn/GMS-Protect/releases) · [GMS Protect Full v1.0.4](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.4)
+>
+> **Note:** The v1.0.4 link will work only after the `v1.0.4` GitHub Release has been published. Installable APKs belong under **Release Assets**, not the source tree.
 
 **GMS Protect** helps Google Play services remain eligible to run in the background on compatible Xiaomi HyperOS / MIUI firmware, particularly China ROMs. No root or permanently running GAME_WATCH service is required.
 
