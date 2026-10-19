@@ -3,7 +3,7 @@
 **Tiếng Việt** | [English](#english)
 
 > ### 📥 Tải GMS Protect
-> **[⬇️ Tải APK v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS_Protect_v1.0.5.apk)** · [Xem bản phát hành v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5) · [Tất cả phiên bản](https://github.com/hoanghanhdevvn/GMS-Protect/releases)
+> **[⬇️ Tải APK v1.0.5]([https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS_Protect_v1.0.5.apk](https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS-Protect-v1.0.5.apk))** · [Xem bản phát hành v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5) · [Tất cả phiên bản](https://github.com/hoanghanhdevvn/GMS-Protect/releases)
 >
 > APK nằm trong **Assets** của GitHub Releases, không nằm trong thư mục mã nguồn. **Link tải trực tiếp yêu cầu APK được đăng đúng tên `GMS_Protect_v1.0.5.apk`.**
 
