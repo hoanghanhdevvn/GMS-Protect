@@ -3,9 +3,9 @@
 **Tiếng Việt** | [English](#english)
 
 > ### 📥 Tải GMS Protect
-> **[⬇️ Tải APK v1.0.5]([https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS_Protect_v1.0.5.apk](https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS-Protect-v1.0.5.apk))** · [Xem bản phát hành v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5) · [Tất cả phiên bản](https://github.com/hoanghanhdevvn/GMS-Protect/releases)
+> **[⬇️ Tải APK v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS-Protect-v1.0.5.apk)** · [Xem bản phát hành v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5) · [Tất cả phiên bản](https://github.com/hoanghanhdevvn/GMS-Protect/releases)
 >
-> APK nằm trong **Assets** của GitHub Releases, không nằm trong thư mục mã nguồn. **Link tải trực tiếp yêu cầu APK được đăng đúng tên `GMS_Protect_v1.0.5.apk`.**
+> APK nằm trong **Assets** của GitHub Releases, không nằm trong thư mục mã nguồn. File APK của bản v1.0.5: **`GMS-Protect-v1.0.5.apk`**.
 
 ## Giới thiệu
 
@@ -32,7 +32,7 @@
 
 ## Cách sử dụng
 
-1. **[Tải APK](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5)** và cài đặt trên điện thoại.
+1. **[Tải APK](https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS-Protect-v1.0.5.apk)** và cài đặt trên điện thoại.
 2. Mở ứng dụng, làm theo hướng dẫn **Tự khởi động**, **Sửa đổi cài đặt hệ thống** và **Pin**.
 3. Vào phần **Ứng dụng bảo vệ → Thêm ứng dụng** nếu muốn bảo vệ thêm ứng dụng khác. Cấp quyền **Access list of installed apps** nếu HyperOS yêu cầu.
 4. Bật các tùy chọn bảo vệ phù hợp và xem **Kiểm tra tương thích / Nhật ký sự kiện** để theo dõi.
@@ -50,9 +50,9 @@
 
 ## English
 
-> **📥 Download:** **[APK v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS_Protect_v1.0.5.apk)** · [v1.0.5 release](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5) · [All releases](https://github.com/hoanghanhdevvn/GMS-Protect/releases)
+> **📥 Download:** **[APK v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS-Protect-v1.0.5.apk)** · [v1.0.5 release](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5) · [All releases](https://github.com/hoanghanhdevvn/GMS-Protect/releases)
 >
-> The direct APK link works after an asset named `GMS_Protect_v1.0.5.apk` is uploaded to the release. Otherwise, open the release and download the APK under **Assets**.
+> APK filename: **`GMS-Protect-v1.0.5.apk`**. You can also find it under **Assets** on the release page.
 
 **GMS Protect** helps improve Google Play services background availability and FCM notification reliability on compatible **Xiaomi HyperOS / MIUI** devices, especially China ROMs. **No root required.**
 
@@ -72,7 +72,7 @@
 
 ### Getting started
 
-1. [Download and install the APK](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5).
+1. [Download and install the APK](https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS-Protect-v1.0.5.apk).
 2. Follow the **Autostart**, **Modify system settings** and **Battery** setup guidance.
 3. Add optional apps and grant **Access list of installed apps** if HyperOS prompts for it. Additional apps may still require manual **No restrictions** battery settings.
 4. Review **Compatibility** and the **Event journal** when needed.
