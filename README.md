@@ -1,74 +1,82 @@
-# GMS Protect Full v1.0.4
+# GMS Protect v1.0.5
 
-**VI** | [English](#english)
+**Tiếng Việt** | [English](#english)
 
-## Tiếng Việt
-
-> **Tải ứng dụng / Download APK:** [Tất cả phiên bản (GitHub Releases)](https://github.com/hoanghanhdevvn/GMS-Protect/releases) · [GMS Protect Full v1.0.4](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.4)
+> ### 📥 Tải GMS Protect
+> **[⬇️ Tải APK v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS_Protect_v1.0.5.apk)** · [Xem bản phát hành v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5) · [Tất cả phiên bản](https://github.com/hoanghanhdevvn/GMS-Protect/releases)
 >
-> **Lưu ý:** Link v1.0.4 chỉ khả dụng sau khi bản phát hành `v1.0.4` được đăng trên GitHub. APK nằm trong mục **Assets** của Release, không nằm trong thư mục source.
+> APK nằm trong **Assets** của GitHub Releases, không nằm trong thư mục mã nguồn. **Link tải trực tiếp yêu cầu APK được đăng đúng tên `GMS_Protect_v1.0.5.apk`.**
 
-**GMS Protect** hỗ trợ duy trì Google Play Services (GMS) và khả năng nhận thông báo FCM trên một số bản Xiaomi HyperOS / MIUI, đặc biệt ROM China. Ứng dụng khai thác các cơ chế bảo vệ sẵn có của hệ thống, không đòi hỏi root hay chạy dịch vụ GAME_WATCH liên tục.
+## Giới thiệu
 
-### Điểm mới trong v1.0.4
+**GMS Protect** giúp Google Play services hoạt động ổn định hơn trong nền, hỗ trợ cải thiện khả năng nhận thông báo FCM trên **Xiaomi HyperOS / MIUI**, đặc biệt là ROM nội địa Trung Quốc.
 
-- **Bảo vệ nền nâng cao (tùy chọn):** thêm và duy trì cả `com.google.android.gms` lẫn `com.hanh.gmsprotect` trong `Settings.System["com.miui.game.allowlist"]` trên máy hỗ trợ.
-- **Tự phục hồi theo sự kiện:** `JobScheduler.TriggerContentUri` theo dõi thay đổi danh sách; khi job được thực thi và phát hiện thiếu mục, ứng dụng bổ sung mà không ghi đè các package còn lại.
-- **Đánh thức khi app không mở:** hỗ trợ JobService được hệ thống gọi lại sau khi tiến trình trước đã kết thúc (phụ thuộc hạn chế nền/Doze của từng ROM).
-- **Kiểm tra tương thích tự động:** có thể bật bảo vệ ngay, các mục PASS được tích lũy từ trạng thái và callback thực tế. PASS không phải cam kết không bao giờ bị freeze.
-- **Giao diện gọn, Việt/Anh:** card trạng thái và Bảo vệ nền nâng cao được tối ưu, phần chi tiết/log nằm sau nút mở rộng.
-- Giữ các cơ chế đã có: **MILLET_NO_RESTRICT_APP**, **MILLET_WATCH**, **MiPush/Greezer**, kiểm tra và yêu cầu FCM reconnect.
+Ứng dụng tận dụng các cơ chế bảo vệ của Xiaomi, **không cần root**. Hai bộ theo dõi danh sách sử dụng sự kiện hệ thống thay vì kiểm tra liên tục bằng vòng lặp.
 
-### Sử dụng
+## Điểm mới ở v1.0.5
 
-1. Cài APK từ **GitHub Releases** và cấp quyền **Sửa đổi cài đặt hệ thống** khi app hướng dẫn.
-2. Hoàn thành hướng dẫn pin/Tự khởi động phù hợp với ROM của máy.
-3. Bật **Bảo vệ nền nâng cao** nếu tương thích; tính năng này mặc định tắt.
-4. Xem **Kiểm tra tương thích** để theo dõi bằng chứng tự xác minh trong quá trình sử dụng.
+- **Bảo vệ từng ứng dụng:** thêm ứng dụng cần bảo vệ, bật/tắt riêng và xem trạng thái từng mục. Google Play services luôn là mục bảo vệ đặc biệt.
+- **Cải tiến màn Thêm ứng dụng:** hướng dẫn quyền **Access list of installed apps** trên HyperOS; xử lý trường hợp hệ thống chỉ trả về danh sách rất ít ứng dụng.
+- **Giao diện mới, Việt/Anh:** màn thiết lập 3 quyền trực quan, icon thống nhất, trạng thái rõ ràng, các mục Cài đặt và chi tiết bảo vệ gọn hơn.
+- **Nhật ký sự kiện:** ghi lại các thao tác và kết quả quan trọng để dễ theo dõi, kiểm tra lỗi.
+- **Kiểm tra tương thích:** phân biệt trạng thái đã xác minh, đang chờ và lỗi; chỉ đánh dấu thành công khi có bằng chứng phù hợp.
 
-### Giới hạn và lưu ý
+## GMS Protect hoạt động như thế nào?
 
-- `targetSdk=22`, `minSdk=22`, `compileSdk=35`, `versionCode=8`, `versionName=1.0.4`.
-- Hiệu quả phụ thuộc ROM: ghi được whitelist **không đồng nghĩa** Greezer luôn miễn đóng băng; Doze vẫn có thể trì hoãn JobScheduler và mạng/FCM vẫn có thể mất kết nối vì nguyên nhân riêng.
-- Trên một số ROM mới, Android có thể hạn chế cài ứng dụng có target SDK cũ. **Không khuyến khích hạ bảo mật thiết bị** để vượt giới hạn.
-- Dự án không sửa file hệ thống, không bảo đảm 100% thông báo và không can thiệp root.
+| Cơ chế | Chức năng |
+| --- | --- |
+| **MILLET Protection** | Giữ GMS, CH Play và GMS Protect trong danh sách **Không hạn chế** của Xiaomi, không xóa các mục có sẵn. |
+| **MiPush / Greezer** | Gửi yêu cầu làm mới bảo vệ cho GMS và ứng dụng được chọn; việc gửi thành công **không đồng nghĩa** Xiaomi đã xác nhận áp dụng. |
+| **Game Allowlist** | Trên ROM hỗ trợ, duy trì GMS, GMS Protect và ứng dụng đã bật trong danh sách bảo vệ bổ sung. |
+| **Tự phục hồi theo sự kiện** | Dùng JobScheduler để theo dõi thay đổi danh sách và hỗ trợ thiết lập lại sau khi khởi động máy. Không dùng dịch vụ foreground thường trú chỉ để theo dõi hai danh sách. |
 
-### Mã nguồn & APK
+## Cách sử dụng
 
-Kho mã nguồn công khai giữ cấu trúc như bản Lite: `README.md` và `src/main/`. Đây là **source code của ứng dụng**; để build, đặt `src/main/` vào `app/src/main/` của một project Android Studio cấu hình tương thích (`applicationId=com.hanh.gmsprotect`, JDK 17, Gradle 8.10.2). **APK phải lấy ở Releases**, không lưu trong nhánh source. Không đưa file ký, mật khẩu, token lên kho.
+1. **[Tải APK](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5)** và cài đặt trên điện thoại.
+2. Mở ứng dụng, làm theo hướng dẫn **Tự khởi động**, **Sửa đổi cài đặt hệ thống** và **Pin**.
+3. Vào phần **Ứng dụng bảo vệ → Thêm ứng dụng** nếu muốn bảo vệ thêm ứng dụng khác. Cấp quyền **Access list of installed apps** nếu HyperOS yêu cầu.
+4. Bật các tùy chọn bảo vệ phù hợp và xem **Kiểm tra tương thích / Nhật ký sự kiện** để theo dõi.
+
+**Lưu ý:** Các ứng dụng được thêm thủ công có thể vẫn cần tự đặt **Pin → Không hạn chế** trong cài đặt Xiaomi; GMS Protect không tự đưa tất cả ứng dụng này vào danh sách MILLET.
+
+## Giới hạn & mã nguồn
+
+- Hiệu quả phụ thuộc phiên bản ROM, cơ chế Doze và chính sách chạy nền. **Không cam kết thông báo hoạt động 100%** hoặc không bao giờ bị đóng băng.
+- Một số phiên bản Android mới có thể hạn chế cài APK dùng target SDK cũ; không nên hạ mức bảo mật thiết bị để cài đặt.
+- Source Java/Android trong repo dành cho người muốn kiểm tra hoặc tự build. **APK cài đặt lấy tại Releases**; không đưa keystore hay thông tin ký ứng dụng lên GitHub.
+- Dự án độc lập, không liên kết chính thức với Google hoặc Xiaomi.
 
 ---
 
 ## English
 
-> **Download / Releases:** [All releases](https://github.com/hoanghanhdevvn/GMS-Protect/releases) · [GMS Protect Full v1.0.4](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.4)
+> **📥 Download:** **[APK v1.0.5](https://github.com/hoanghanhdevvn/GMS-Protect/releases/download/v1.0.5/GMS_Protect_v1.0.5.apk)** · [v1.0.5 release](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5) · [All releases](https://github.com/hoanghanhdevvn/GMS-Protect/releases)
 >
-> **Note:** The v1.0.4 link will work only after the `v1.0.4` GitHub Release has been published. Installable APKs belong under **Release Assets**, not the source tree.
+> The direct APK link works after an asset named `GMS_Protect_v1.0.5.apk` is uploaded to the release. Otherwise, open the release and download the APK under **Assets**.
 
-**GMS Protect** helps Google Play services remain eligible to run in the background on compatible Xiaomi HyperOS / MIUI firmware, particularly China ROMs. No root or permanently running GAME_WATCH service is required.
+**GMS Protect** helps improve Google Play services background availability and FCM notification reliability on compatible **Xiaomi HyperOS / MIUI** devices, especially China ROMs. **No root required.**
 
-### What's new in v1.0.4
+### What's new in v1.0.5
 
-- **Enhanced Background Protection (opt-in):** maintains `com.google.android.gms` and `com.hanh.gmsprotect` in the Xiaomi Game Allowlist where supported.
-- **Event-driven recovery:** `JobScheduler.TriggerContentUri` observes list changes and merges missing entries without erasing other packages.
-- **Process restart support:** a system-dispatched JobService can run after the prior app process has exited, subject to ROM/Doze restrictions.
-- **Passive compatibility evidence:** protection can be enabled immediately; PASS indicators are earned through actual state and system callbacks.
-- **Compact bilingual UI:** cleaner status/protection cards, optional details and activity logs.
-- Retains **MILLET_NO_RESTRICT_APP**, **MILLET_WATCH**, **MiPush/Greezer**, and FCM connectivity tools.
+- **Per-app protection:** add apps, enable/disable their protection individually and inspect status; GMS remains a built-in protected entry.
+- **Improved app picker:** guidance for Xiaomi's **Access list of installed apps** permission and handling of unexpectedly restricted package lists.
+- **Refreshed bilingual UI:** a clearer three-permission setup, consistent icons, compact Settings and protection details.
+- **Event journal and compatibility checks:** inspect activity, pending checks, confirmed results and errors.
+
+### Protection mechanisms
+
+- **MILLET:** keeps Google Play services, Play Store and GMS Protect in Xiaomi's no-restriction list while preserving existing entries.
+- **MiPush / Greezer:** sends best-effort protection refresh requests; a successful send is **not** confirmation from Xiaomi.
+- **Game Allowlist:** maintains GMS, GMS Protect and enabled apps on supported ROMs.
+- **Event-driven recovery:** JobScheduler observes relevant list changes; boot events can restore setup. No permanent foreground service is used just to poll the two lists.
 
 ### Getting started
 
-1. Install the APK from **GitHub Releases**, and grant **Modify system settings** as requested.
-2. Follow the ROM-specific battery/autostart setup instructions.
-3. Optionally enable **Enhanced Background Protection**.
-4. Check the Compatibility screen as real-world evidence accumulates.
+1. [Download and install the APK](https://github.com/hoanghanhdevvn/GMS-Protect/releases/tag/v1.0.5).
+2. Follow the **Autostart**, **Modify system settings** and **Battery** setup guidance.
+3. Add optional apps and grant **Access list of installed apps** if HyperOS prompts for it. Additional apps may still require manual **No restrictions** battery settings.
+4. Review **Compatibility** and the **Event journal** when needed.
 
-### Limitations
+**Limitations:** Results vary by device and ROM; Doze and independent FCM factors can still delay notifications. **100% push delivery is not guaranteed.** Some modern Android versions restrict installation of older-targeted APKs. Source code is in this repository; installable APKs are in **Releases**. Never publish signing keys.
 
-- `targetSdk=22`, `minSdk=22`, `compileSdk=35`, `versionCode=8`, `versionName=1.0.4`.
-- Allowlist write success does **not** prove that every freeze path is blocked. Doze may delay jobs, and FCM connectivity is governed by independent factors. No 100% notification guarantee.
-- Some recent Android versions restrict installation of apps targeting old SDK levels. Do not weaken device security to bypass installation protections.
-
-### Sources and releases
-
-This repository follows the Lite layout: `README.md` and `src/main/`. To build, integrate `src/main/` into a compatible Android Studio app project using package ID `com.hanh.gmsprotect`, JDK 17 and Gradle 8.10.2. Obtain installable APKs from **GitHub Releases**. Never upload signing keys, credentials or tokens.
+*Independent utility — not affiliated with Google or Xiaomi.*
